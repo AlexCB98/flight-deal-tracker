@@ -1,2 +1,4 @@
 class NotificationManager:
-    pass
+
+    def send_notification(self, message):
+        print(message)
