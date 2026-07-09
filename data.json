@@ -1,0 +1,17 @@
+[
+    {
+        "city": "Paris",
+        "iataCode": "PAR",
+        "lowestPrice": 150
+    },
+    {
+        "city": "Berlin",
+        "iataCode": "BER",
+        "lowestPrice": 100
+    },
+    {
+        "city": "Tokyo",
+        "iataCode": "TYO",
+        "lowestPrice": 600
+    }
+]
