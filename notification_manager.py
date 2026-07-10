@@ -3,7 +3,7 @@ import json
 
 class NotificationManager:
 
-    def send_notification(self, message):
+    def send_notification(self, searched_flight):
 
         try:
             with open('flight_deals.json', 'r') as flight_deals:
@@ -14,7 +14,11 @@ class NotificationManager:
             data = []
 
         new_deal = {
-            'flight_deal': message,
+            'origin': searched_flight.origin_airport,
+            'destination' : searched_flight.destination_airport,
+            'price': searched_flight.price,
+            'out_date' : searched_flight.out_date,
+            'return_date': searched_flight.return_date,
         }
 
         if new_deal not in data:
