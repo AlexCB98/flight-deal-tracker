@@ -12,6 +12,7 @@ class FlightSearch:
             'ROM': 110,
             'MAD': 140,
             'AMS': 130,
+            'VIE': 95,
         }
 
         self.destinations = {
@@ -22,6 +23,7 @@ class FlightSearch:
             'ROM': 'Rome',
             'MAD': 'Madrid',
             'AMS': 'Amsterdam',
+            'VIE': 'Vienna',
         }
 
     def search_flight(self, origin_airport, destination_airport):
