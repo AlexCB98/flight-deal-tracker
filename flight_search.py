@@ -16,10 +16,8 @@ class FlightSearch:
 
     def search_flight(self, origin_airport, destination_airport, destination_city):
 
-        price = self.prices.get(destination_airport, 999)
-
         flight_data = FlightData(
-            price=price,
+            price=self.get_price(destination_airport),
             origin_airport=origin_airport,
             destination_airport=destination_airport,
             destination_city=destination_city,
@@ -28,3 +26,9 @@ class FlightSearch:
         )
 
         return flight_data
+
+    def get_price(self, destination_airport):
+
+        price = self.prices.get(destination_airport, 999)
+
+        return price
