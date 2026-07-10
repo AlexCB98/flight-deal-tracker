@@ -1,6 +1,7 @@
 from data_manager import DataManager
 from notification_manager import NotificationManager
 from flight_search import FlightSearch
+import sys
 
 
 flight_search = FlightSearch()
@@ -8,6 +9,10 @@ data_manager = DataManager()
 notification = NotificationManager()
 
 data = data_manager.get_destination_data()
+
+if not data:
+    print('No destinations found.')
+    sys.exit()
 
 new_deals_count = 0
 
