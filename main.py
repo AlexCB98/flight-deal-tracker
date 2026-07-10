@@ -17,6 +17,10 @@ for destination in data:
         destination['iataCode'],
     )
 
+    if searched_flight is None:
+        print(f"No flights found for {destination['iataCode']}.")
+        continue
+
     if searched_flight.price < destination['lowestPrice']:
 
         was_saved = notification.send_notification(searched_flight)
