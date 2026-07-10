@@ -1,5 +1,6 @@
 from flight_data import FlightData
 
+
 class FlightSearch:
 
     def search_flight(self, origin_airport, destination_airport):

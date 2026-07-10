@@ -1,5 +1,6 @@
 import json
 
+
 class DataManager:
 
     def get_destination_data(self):

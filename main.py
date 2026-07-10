@@ -15,5 +15,6 @@ for destination in data:
     if searched_flight.price < destination['lowestPrice']:
         notification.send_notification(
             f'Low price alert! Flight from {searched_flight.origin_airport} '
-            f'to {searched_flight.destination_airport} costs {searched_flight.price}€.'
+            f'to {searched_flight.destination_airport} costs {searched_flight.price}€.\n'
+            f'Departure: {searched_flight.out_date} | Return: {searched_flight.return_date}\n'
         )
