@@ -14,13 +14,23 @@ class FlightSearch:
             'AMS': 130,
         }
 
-    def search_flight(self, origin_airport, destination_airport, destination_city):
+        self.destinations = {
+            'PAR': 'Paris',
+            'BER': 'Berlin',
+            'TYO': 'Tokyo',
+            'LON': 'London',
+            'ROM': 'Rome',
+            'MAD': 'Madrid',
+            'AMS': 'Amsterdam',
+        }
+
+    def search_flight(self, origin_airport, destination_airport):
 
         flight_data = FlightData(
             price=self.get_price(destination_airport),
             origin_airport=origin_airport,
             destination_airport=destination_airport,
-            destination_city=destination_city,
+            destination_city=self.get_destination_name(destination_airport),
             out_date='2026-08-10',
             return_date='2026-08-17',
         )
@@ -30,5 +40,9 @@ class FlightSearch:
     def get_price(self, destination_airport):
 
         price = self.prices.get(destination_airport, 999)
-
         return price
+
+    def get_destination_name(self, destination_airport):
+
+        destination = self.destinations.get(destination_airport, 'Unknown')
+        return destination
