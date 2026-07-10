@@ -17,7 +17,8 @@ class NotificationManager:
             'flight_deal': message,
         }
 
-        data.append(new_deal)
+        if new_deal not in data:
+            data.append(new_deal)
 
-        with open('flight_deals.json', 'w') as flight_deals:
-            json.dump(data, flight_deals, indent=4)
+            with open('flight_deals.json', 'w') as flight_deals:
+                json.dump(data, flight_deals, indent=4)
