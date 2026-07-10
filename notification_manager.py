@@ -15,9 +15,10 @@ class NotificationManager:
 
         new_deal = {
             'origin': searched_flight.origin_airport,
-            'destination' : searched_flight.destination_airport,
+            'destination': searched_flight.destination_airport,
+            'city': searched_flight.destination_city,
             'price': searched_flight.price,
-            'out_date' : searched_flight.out_date,
+            'out_date': searched_flight.out_date,
             'return_date': searched_flight.return_date,
         }
 

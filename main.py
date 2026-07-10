@@ -10,7 +10,11 @@ notification = NotificationManager()
 data = data_manager.get_destination_data()
 
 for destination in data:
-    searched_flight = flight_search.search_flight('MUC', destination['iataCode'])
+    searched_flight = flight_search.search_flight(
+        'MUC',
+        destination['iataCode'],
+        destination['city']
+    )
 
     if searched_flight.price < destination['lowestPrice']:
         notification.send_notification(searched_flight)

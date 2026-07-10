@@ -13,5 +13,10 @@
         "city": "Tokyo",
         "iataCode": "TYO",
         "lowestPrice": 600
+    },
+    {
+        "city": "Vienna",
+        "iataCode": "VIE",
+        "lowestPrice": 1100
     }
 ]
