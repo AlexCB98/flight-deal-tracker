@@ -27,3 +27,7 @@ class NotificationManager:
 
             with open('flight_deals.json', 'w') as flight_deals:
                 json.dump(data, flight_deals, indent=4)
+
+            return True
+
+        return False

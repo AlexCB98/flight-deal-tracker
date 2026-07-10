@@ -16,4 +16,10 @@ for destination in data:
     )
 
     if searched_flight.price < destination['lowestPrice']:
-        notification.send_notification(searched_flight)
+
+        was_saved = notification.send_notification(searched_flight)
+
+        if was_saved:
+            print('New deal saved.')
+        else:
+            print('Deal already exists.')
