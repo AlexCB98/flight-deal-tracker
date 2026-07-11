@@ -21,6 +21,7 @@ for destination in data:
     searched_flight = flight_search.search_flight(
         'MUC',
         destination['iataCode'],
+        destination['city'],
     )
 
     if searched_flight is None:
@@ -36,5 +37,12 @@ for destination in data:
             print('New deal saved.')
         else:
             print('Deal already exists.')
+
+    else:
+        print(
+            f"No deal for {destination['city']}: "
+            f"{searched_flight.price} EUR "
+            f"(limit: {destination['lowestPrice']} EUR)"
+        )
 
 print(f'New deals found: {new_deals_count}')
