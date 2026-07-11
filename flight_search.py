@@ -16,23 +16,31 @@ class FlightSearch:
 
     def search_flight(self, origin_airport, destination_airport):
         params = {
-            "api_key": self.api_key,
-            "engine": "google_flights",
-            "departure_id": origin_airport,
-            "arrival_id": destination_airport,
-            "outbound_date": "2026-08-10",
-            "return_date": "2026-08-17",
-            "currency": "EUR",
-            "hl": "en",
+            'api_key': self.api_key,
+            'engine': 'google_flights',
+            'departure_id': origin_airport,
+            'arrival_id': destination_airport,
+            'outbound_date': '2026-08-10',
+            'return_date': '2026-08-17',
+            'currency': 'EUR',
+            'hl': 'en',
         }
 
         response = requests.get(
             url=self.endpoint,
             params=params,
-            timeout=10,
+            timeout=30,
         )
 
         response.raise_for_status()
         data = response.json()
 
-        return data
+        if 'error' in data:
+            print(f'API error for {destination_airport}: {data['error']}')
+            return None
+
+        flights = data.get('best_flights', [])
+
+        print(len(flights))
+        return None
+

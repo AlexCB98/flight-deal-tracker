@@ -1,22 +1,22 @@
 [
     {
         "city": "Paris",
-        "iataCode": "PAR",
-        "lowestPrice": 150
+        "iataCode": "CDG",
+        "lowestPrice": 170
     },
     {
         "city": "Berlin",
         "iataCode": "BER",
-        "lowestPrice": 100
+        "lowestPrice": 150
     },
     {
         "city": "Tokyo",
-        "iataCode": "TYO",
-        "lowestPrice": 600
+        "iataCode": "NRT",
+        "lowestPrice": 750
     },
     {
         "city": "Vienna",
         "iataCode": "VIE",
-        "lowestPrice": 1100
+        "lowestPrice": 180
     }
 ]
