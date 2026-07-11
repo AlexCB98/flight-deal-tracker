@@ -25,3 +25,14 @@ class FlightSearch:
             "currency": "EUR",
             "hl": "en",
         }
+
+        response = requests.get(
+            url=self.endpoint,
+            params=params,
+            timeout=10,
+        )
+
+        response.raise_for_status()
+        data = response.json()
+
+        return data
