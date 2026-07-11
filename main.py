@@ -1,7 +1,8 @@
+import sys
+
 from data_manager import DataManager
 from notification_manager import NotificationManager
 from flight_search import FlightSearch
-import sys
 
 
 flight_search = FlightSearch()
